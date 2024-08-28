@@ -40,15 +40,17 @@ def check_part_time_wage(partime_hr, wage_per_hr):
     print(f"Employee is present for half time.") 
     print(f"Part time wage is: {daily_half_wage}")
 
+DAILY_HR = 8
+WAGE_PER_HR = 20
+PART_TIME_HR = 4
+    
 def main():
-    daily_hr = 8
-    wage_per_hr = 20
-    part_time_hr = 4
+
     choice=check_attend()
     if(choice == 1):
-        check_daily_wage(daily_hr, wage_per_hr)
+        check_daily_wage(DAILY_HR, WAGE_PER_HR)
     elif(choice == 2):
-        check_part_time_wage(part_time_hr, wage_per_hr)
+        check_part_time_wage(PART_TIME_HR, WAGE_PER_HR)
     else:
         daily_wage = 0
         print("Employee is Absent...")
