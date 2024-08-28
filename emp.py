@@ -47,14 +47,19 @@ PART_TIME_HR = 4
 def main():
 
     choice=check_attend()
-    if(choice == 1):
-        check_daily_wage(DAILY_HR, WAGE_PER_HR)
-    elif(choice == 2):
-        check_part_time_wage(PART_TIME_HR, WAGE_PER_HR)
-    else:
-        daily_wage = 0
-        print("Employee is Absent...")
-        print(f"The daily wage is: {daily_wage}")
+    
+    match choice:
+        case 0:
+            daily_wage = 0
+            print("Employee is Absent...")
+            print(f"The daily wage is: {daily_wage}")
+            
+        case 1:
+            check_daily_wage(DAILY_HR, WAGE_PER_HR)
+            
+        case 2:
+            check_part_time_wage(PART_TIME_HR, WAGE_PER_HR)
+        
 
 if __name__=='__main__':
     main()
